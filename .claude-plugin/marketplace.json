@@ -1,0 +1,19 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/npm/@anthropic-ai/claude-code-plugin-schemas@latest/marketplace.schema.json",
+  "name": "dhkts1-plugins",
+  "description": "Claude Code plugins by dhkts1",
+  "plugins": [
+    {
+      "name": "linear-plan-sync",
+      "source": {
+        "type": "github",
+        "repo": "dhkts1/linear-plan-sync"
+      },
+      "description": "Automatically sync Claude Code plans to Linear tickets when exiting plan mode",
+      "version": "1.0.0",
+      "author": {
+        "name": "dhkts1"
+      }
+    }
+  ]
+}
