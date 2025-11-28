@@ -14,11 +14,14 @@ CONFIG_FILE="${HOME}/.claude/linear-sync.json"
 
 # Load configuration from file or environment variables
 load_config() {
+  local config_api_key=""
+
   if [ -f "$CONFIG_FILE" ]; then
     TEAM_ID=$(jq -r '.teamId // empty' "$CONFIG_FILE")
     CREATE_MIRROR=$(jq -r '.createMirrorTickets // true' "$CONFIG_FILE")
     TITLE_FORMAT=$(jq -r '.ticketTitleFormat // "{TICKET_ID}: Plan Documentation"' "$CONFIG_FILE")
     COMMENT_HEADER=$(jq -r '.commentHeader // "## Implementation Plan"' "$CONFIG_FILE")
+    config_api_key=$(jq -r '.apiKey // empty' "$CONFIG_FILE")
   else
     # Fallback to environment variables
     TEAM_ID="${LINEAR_TEAM_ID:-}"
@@ -27,8 +30,8 @@ load_config() {
     COMMENT_HEADER="${LINEAR_COMMENT_HEADER:-## Implementation Plan}"
   fi
 
-  # API key always from environment (security best practice)
-  API_KEY="${LINEAR_API_KEY:-}"
+  # API key priority: env var > config file
+  API_KEY="${LINEAR_API_KEY:-$config_api_key}"
 }
 
 # ============================================================================
