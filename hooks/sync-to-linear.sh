@@ -186,9 +186,8 @@ post_comment() {
 # ============================================================================
 
 main() {
-  # Source shell profile for API keys
-  [ -f ~/.zshrc ] && source ~/.zshrc 2>/dev/null || true
-  [ -f ~/.bashrc ] && source ~/.bashrc 2>/dev/null || true
+  # Note: API key should be in config file (~/.claude/linear-sync.json)
+  # or set as LINEAR_API_KEY environment variable
 
   # Read JSON input from stdin (PostToolUse provides context)
   local stdin_json
