@@ -92,7 +92,7 @@ extract_ticket_id() {
   ticket_id=$(echo "$branch" | grep -oiE '[A-Z]+-[0-9]+' | head -1 | tr '[:lower:]' '[:upper:]')
 
   if [ -z "$ticket_id" ]; then
-    ticket_id="NO-TICKET"
+    ticket_id="$branch"
   fi
 
   echo "$ticket_id"
