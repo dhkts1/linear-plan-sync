@@ -43,7 +43,8 @@ load_config() {
 
 validate_config() {
   if [ -z "$API_KEY" ]; then
-    echo "LINEAR_API_KEY environment variable not set"
+    echo "Linear API key not configured"
+    echo "Set apiKey in $CONFIG_FILE or LINEAR_API_KEY env var"
     echo "Get your API key from: https://linear.app/settings/api"
     exit 0  # Silent exit - don't fail the hook
   fi
