@@ -5,6 +5,9 @@
 
 set -euo pipefail
 
+# Ensure common tools are in PATH
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
+
 # Configuration file path
 CONFIG_FILE="${HOME}/.claude/linear-sync.json"
 
