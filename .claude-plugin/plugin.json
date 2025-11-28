@@ -15,8 +15,5 @@
     "project-management",
     "sync"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dhkts1/linear-plan-sync"
-  }
+  "repository": "https://github.com/dhkts1/linear-plan-sync"
 }
