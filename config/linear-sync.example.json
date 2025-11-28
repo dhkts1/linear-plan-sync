@@ -1,0 +1,6 @@
+{
+  "teamId": "YOUR_LINEAR_TEAM_ID",
+  "createMirrorTickets": true,
+  "ticketTitleFormat": "{TICKET_ID}: Plan Documentation",
+  "commentHeader": "## Implementation Plan"
+}

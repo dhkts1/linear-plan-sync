@@ -1,0 +1,22 @@
+{
+  "name": "linear-plan-sync",
+  "description": "Automatically sync Claude Code plans to Linear tickets when exiting plan mode. Creates mirror tickets and posts implementation plans as comments for seamless project management integration.",
+  "version": "1.0.0",
+  "author": {
+    "name": "dhkts1",
+    "url": "https://github.com/dhkts1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "linear",
+    "planning",
+    "automation",
+    "hooks",
+    "project-management",
+    "sync"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhkts1/linear-plan-sync"
+  }
+}
